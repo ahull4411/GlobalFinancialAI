@@ -1,10 +1,57 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Admin</title>
-  </head>
-  <body>
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Financial AI Blog</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Global Financial AI</h1>
+    <p>Smart Side Hustles, AI Tools, and Passive Income Ideas</p>
+  </header>
+
+  <main>
+    <section id="posts">
+      <!-- Blog posts will be loaded here -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GlobalFinancialAI.com</p>
+  </footer>
+
+  <script>
+    const posts = [
+      {
+        title: "7 AI-Powered Side Hustles You Can Start for Free",
+        url: "posts/2025-07-21-7-ai-powered-side-hustles-you-can-start-for-free.html"
+      },
+      {
+        title: "How to Use ChatGPT to Launch a Personal Finance Blog in One Weekend",
+        url: "posts/2025-07-22-how-to-use-chatgpt-to-launch-a-personal-finance-blog-in-one-weekend.html"
+      },
+      {
+        title: "5 Free AI Tools to Create Passive Income Streams",
+        url: "posts/2025-07-23-5-free-ai-tools-to-create-passive-income-streams.html"
+      },
+      {
+        title: "Canva + AI: Design Digital Products That Sell Themselves",
+        url: "posts/2025-07-24-canva-+-ai-design-digital-products-that-sell-themselves.html"
+      },
+      {
+        title: "From Zero to $500/Month: AI Affiliate Marketing with No Upfront Cost",
+        url: "posts/2025-07-25-from-zero-to-500-month-ai-affiliate-marketing-with-no-upfront-cost.html"
+      }
+    ];
+
+    const container = document.getElementById('posts');
+    posts.forEach(post => {
+      const article = document.createElement('article');
+      article.innerHTML = `<h2><a href="\${post.url}">\${post.title}</a></h2>`;
+      container.appendChild(article);
+    });
+  </script>
+</body>
 </html>
